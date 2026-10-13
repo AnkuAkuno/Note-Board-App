@@ -1,3 +1,6 @@
+import logoImg from "../assets/images/writing,png"
+
+
 function Navbar({activeTab, setActiveTab}) {
 
     const menus = [
@@ -12,7 +15,7 @@ function Navbar({activeTab, setActiveTab}) {
 
             
             <div className="navbar-logo">
-            <img src="/src/assets/images/writing.png" className="navbar-logo-image" />
+            <img src={logoImg} alt="Task Board Logo" className="navbar-logo-image" />
             <h2>Task Board</h2>
 
             </div>
