@@ -12,7 +12,7 @@ function Navbar({activeTab, setActiveTab}) {
 
             
             <div className="navbar-logo">
-            <img src="./src/assets/images/writing.png" className="navbar-logo-image" />
+            <img src="/src/assets/images/writing.png" className="navbar-logo-image" />
             <h2>Task Board</h2>
 
             </div>
