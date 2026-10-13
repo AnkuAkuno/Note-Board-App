@@ -1,0 +1,647 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  
+}
+
+
+
+
+
+
+
+
+/* [ STYLE UNTUK NAVBAR] */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #6ed1fb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-logo {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #fcfbfb;
+}
+
+.navbar-logo-image {
+  width: 2.4rem;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-bottom: 0.2rem;
+  color: #ffffff;
+  transition: all 0.2 ease;
+}
+
+.nav-btn:hover {
+  color: #000;
+}
+
+.nav-btn.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #333;
+}
+
+
+
+
+
+
+
+
+/* [MAIN LAYOUT START] */
+
+
+.board-title {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* Styling Header Board & Tombol Quick Add */
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-quick-add {
+  background: #6200ea;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(98, 0, 234, 0.3);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-quick-add:hover {
+  background: #3700b3;
+  transform: translateY(-2px);
+}
+
+/* Sentuhan Visual Papan Tempel (Board Container) */
+.main-content {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fbf6ed; /* Warna krem halus khas kertas/papan */
+  min-height: 80vh;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03), 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* [MAIN LAYOUT END] */
+
+
+
+
+
+
+
+
+
+
+
+
+/* [ NOTE SECTION START ] */
+
+
+.note-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: solid 2px rgb(119, 121, 119);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.note-form-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 30px
+}
+
+.form-mode-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mode-tab-btn {
+  flex: 1;
+  padding: 0.6rem;
+  border: 2px solid #e0e0e0;
+  background: #f9f9f9;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.mode-tab-btn.active {
+  background: #2196f3;
+  color: #fff;
+  border-color: #181818;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input-title {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+}
+
+
+.form-textarea,
+.todo-item-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.todo-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-add-item {
+  padding: 0 1rem;
+  background: #5bcc5f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.btn-add-item:hover {
+  background: #439647;
+}
+
+.temp-todo-list {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.temp-todo-list li {
+
+  display: flex;
+  margin-bottom: 0.6rem;
+}
+
+
+.temp-todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f9;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+
+.btn-del-item {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-submit-note {
+  padding: 0.8rem;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-submit-note:hover {
+  background: #1976d2;
+}
+
+
+/* [ NOTE SECTION END ] */
+
+
+
+
+
+
+
+
+
+
+
+/* [ STICKY NOTE STYLE START ] */
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.note-card {
+  background: #fff9c4; /* Warna kuning khas sticky note */
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-left: 5px solid #fbc02d;
+}
+
+.note-card-draggable {
+  cursor: grab;
+}
+
+.note-card-draggable:active {
+  cursor: grabbing;
+  opacity: 1;
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.note-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.note-type-badge {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.note-title {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.note-content {
+  font-size: 0.95rem;
+  color: #444;
+  white-space: pre-wrap;
+}
+
+.note-todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.note-todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.note-todo-item span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  margin-top: 3rem;
+}
+
+.btn-delete-card {
+  background: transparent;
+  border: none;
+  color: #ff5252;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 4px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  margin-left: auto ;
+}
+
+.btn-delete-card:hover {
+  background: rgba(255, 82, 82, 0.15);
+}
+
+
+/* [ STICKY NOTE STYLE END ] */
+
+
+
+
+
+
+
+
+
+
+
+/* [STYLING KONTROL FILTER START] */
+
+.filter-container {
+  display: flex;
+  gap: 1.5rem;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.filter-group select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+}
+
+/* [STYLING KONTROL FILTER END] */
+
+
+
+
+
+
+
+
+
+/* [ Styling Pilihan Warna & Layout Form Row START] */
+.form-group-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.color-btn:hover {
+  transform: scale(1.15);
+}
+
+.color-btn.active {
+  border-color: #333;
+  transform: scale(1.15);
+}
+
+/* [ Styling Pilihan Warna & Layout Form Row END] */
+
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-top: 230px;
+  color: #868484;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    gap: 0.5rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .navbar-logo {
+    flex-shrink: 0;
+    gap: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  .navbar-logo-image {
+    width: 1.6rem;
+  }
+
+  .navbar-menu {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+
+  .nav-btn {
+    flex-shrink: 0;
+    padding: 0 0.15rem 0.15rem;
+    font-size: 0.62rem;
+    white-space: nowrap;
+  }
+
+  .nav-btn.active {
+    border-bottom-width: 2px;
+  }
+
+  .main-content {
+    min-height: calc(100vh - 3.5rem);
+    margin: 0.75rem;
+    padding: 0.85rem;
+  }
+
+  .board-header {
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .board-title {
+    font-size: 1.35rem;
+  }
+
+  .btn-quick-add {
+    flex-shrink: 0;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .board-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 0.85rem;
+  }
+
+  .note-card {
+    min-width: 0;
+    padding: 0.65rem;
+    gap: 0.45rem;
+    border-left-width: 3px;
+  }
+
+  .note-card-header {
+    gap: 0.2rem;
+    flex-wrap: wrap;
+    font-size: 0.62rem;
+  }
+
+  .note-type-badge {
+    padding: 0.12rem 0.3rem;
+  }
+
+  .note-date {
+    font-size: 0.58rem;
+  }
+
+  .btn-delete-card {
+    font-size: 0.9rem;
+  }
+
+  .note-title {
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+
+  .note-content,
+  .note-todo-item {
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+
+  .note-todo-item {
+    gap: 0.3rem;
+  }
+
+  .note-todo-item input {
+    flex-shrink: 0;
+  }
+
+  .note-form-container {
+    padding: 1rem;
+  }
+
+  .note-form-title {
+    font-size: 1.6rem;
+  }
+
+  .form-group-row {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .filter-container {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .about-content {
+    margin-top: 20vh;
+    padding: 0 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    gap: 0.3rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+  }
+
+  .navbar-logo {
+    font-size: 0.9rem;
+  }
+
+  .navbar-logo-image {
+    width: 1.4rem;
+  }
+
+  .navbar-menu {
+    gap: 0.15rem;
+  }
+
+  .nav-btn {
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    font-size: 0.58rem;
+  }
+}
