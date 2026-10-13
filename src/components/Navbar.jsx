@@ -1,4 +1,4 @@
-import logoImg from "../assets/images/writing,png"
+import logoImg from "../assets/images/writing.png"
 
 
 function Navbar({activeTab, setActiveTab}) {
